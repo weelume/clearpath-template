@@ -3,9 +3,9 @@
   "format": "git-template-verification",
   "formatVersion": "0.2.0",
   "status": "passed",
-  "checkedAt": "2026-11-02T08:37:21.481Z",
-  "sourceCommit": "9736e78e72ee1e2126851619ea961eb56b8eda8b",
-  "sourceDigest": "7435eb23e3ac49c31e604be0e183329ce4730e66e4bf5e8b00be2813312fe5ff",
+  "checkedAt": "2026-11-02T08:54:20.599Z",
+  "sourceCommit": "a0348a1573212c755eef4be6e0ad137f94a7472b",
+  "sourceDigest": "5d0c64861a6bed7e3146c8c8e62b1a14179829e03c5d413bd61cf0fc82070a7f",
   "environment": {
     "platform": "linux",
     "arch": "x64",
@@ -25,8 +25,8 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "startedAt": "2026-11-02T08:36:58.236Z",
-      "finishedAt": "2026-11-02T08:36:59.973Z"
+      "startedAt": "2026-11-02T08:53:56.209Z",
+      "finishedAt": "2026-11-02T08:53:58.165Z"
     },
     {
       "id": "lint",
@@ -38,8 +38,8 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "startedAt": "2026-11-02T08:36:59.973Z",
-      "finishedAt": "2026-11-02T08:37:01.999Z"
+      "startedAt": "2026-11-02T08:53:58.166Z",
+      "finishedAt": "2026-11-02T08:54:00.344Z"
     },
     {
       "id": "test",
@@ -51,8 +51,8 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "startedAt": "2026-11-02T08:37:01.999Z",
-      "finishedAt": "2026-11-02T08:37:02.495Z"
+      "startedAt": "2026-11-02T08:54:00.344Z",
+      "finishedAt": "2026-11-02T08:54:00.933Z"
     },
     {
       "id": "build",
@@ -64,8 +64,8 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "startedAt": "2026-11-02T08:37:02.496Z",
-      "finishedAt": "2026-11-02T08:37:20.065Z"
+      "startedAt": "2026-11-02T08:54:00.933Z",
+      "finishedAt": "2026-11-02T08:54:19.229Z"
     }
   ],
   "services": [
@@ -73,7 +73,7 @@
       "id": "web",
       "status": "passed",
       "stopped": true,
-      "checkedAt": "2026-11-02T08:37:21.145Z",
+      "checkedAt": "2026-11-02T08:54:20.253Z",
       "reason": "生产服务通过38条双语真实HTTP调用；使用PORT=43644隔离验收，随后停止本次进程组。"
     }
   ],
