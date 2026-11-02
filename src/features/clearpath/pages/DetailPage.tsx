@@ -1,0 +1,10 @@
+'use client'
+import {Shell,Pill} from '../components/Shell'
+import {useSite,image} from '../components/context'
+import {Reveal,ParallaxImage} from '../components/Motion'
+import {CTA,FAQ} from '../components/Blocks'
+import {JournalCards} from '../components/Editorial'
+import {articles,stories,type Detail} from '../content/details'
+import type {PageProps} from '../types'
+function Content({detail,kind}:{detail:Detail;kind:'stories'|'journal'}){const {t}=useSite(),story=kind==='stories',pool=story?stories:articles,next=pool[(pool.findIndex(x=>x.slug===detail.slug)+1)%pool.length];return <><section className={'cp-detail-hero '+(story?'cp-story-hero':'cp-article-hero')}>{story&&<img src={image(detail.image)} alt={t(detail.title)} fetchPriority="high"/>}<div className="cp-container">{detail.category&&<span className="cp-eyebrow">{t(detail.category)}</span>}<Reveal><h1>{t(detail.title)}</h1></Reveal><Reveal className="cp-detail-intro" delay={.15}><p>{t(detail.intro)}</p></Reveal></div></section>{!story&&<ParallaxImage name={detail.image} alt={t(detail.title)} className="cp-article-image"/>}<article className={'cp-section cp-container cp-article-body '+(story?'cp-story-body':'')}>{detail.blocks.map((b,i)=><Reveal key={i}>{b.tag==='p'?<p>{t(b.text)}</p>:<h2 className={b.tag==='h4'?'cp-body-quote':''}>{t(b.text)}</h2>}</Reveal>)}<p className="cp-eyebrow">{t(['安娜·凯勒 · 咨询师与创始人','Anna Keller · Therapist & Founder'])}</p><p className="cp-note">{t(['模板演示内容。人物、经历及服务信息不构成真实医疗服务或疗效承诺。','Template demonstration content. Profiles, experiences, and service information do not represent real medical services or promised outcomes.'])}</p></article>{story?<><div className="cp-container cp-next"><Pill to={'stories/'+next.slug}>{t(['阅读下一个故事','Read next story'])}</Pill></div><CTA/></>:<><JournalCards related items={articles.filter(a=>a.slug!==detail.slug).slice(0,2)}/><FAQ/></>}</>}
+export default function DetailPage({detail,kind,...props}:PageProps&{detail:Detail;kind:'stories'|'journal'}){return <Shell {...props} slug={kind+'/'+detail.slug} hero={kind==='stories'}><Content detail={detail} kind={kind}/></Shell>}

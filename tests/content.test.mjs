@@ -1,0 +1,8 @@
+import test from 'node:test'
+import assert from 'node:assert/strict'
+import {readFile,access} from 'node:fs/promises'
+import ts from 'typescript'
+const root=new URL('../',import.meta.url)
+async function loadContent(){const reference=JSON.parse(await readFile(new URL('src/features/clearpath/content/reference.json',root),'utf8'));let source=await readFile(new URL('src/features/clearpath/content/details.ts',root),'utf8');source=source.replace("import reference from './reference.json'",'const reference='+JSON.stringify(reference));const output=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2023}}).outputText;return import('data:text/javascript;base64,'+Buffer.from(output).toString('base64'))}
+test('十篇详情完整提供双语段落，内容不串页',async()=>{const {articles,stories}=await loadContent();assert.equal(articles.length,5);assert.equal(stories.length,5);assert.equal(new Set([...articles,...stories].map(x=>x.slug)).size,10);for(const item of [...articles,...stories]){assert.ok(item.blocks.length>=9);for(const block of item.blocks){assert.equal(block.text.length,2);assert.match(block.text[0],/[\u3400-\u9fff]/);assert.ok(block.text[1].trim().length>0)}await access(new URL('public/templates/clearpath/images/'+item.image,root))}})
+test('所有参考图片已本地化并匹配记录摘要',async()=>{const {createHash}=await import('node:crypto');const manifest=JSON.parse(await readFile(new URL('docs/assets.json',root),'utf8'));assert.ok(manifest.length>=40);for(const asset of manifest){const bytes=await readFile(new URL(asset.path,root));assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256,asset.path)}})

@@ -1,0 +1,285 @@
+{
+  "$schema": "./schemas/template.schema.json",
+  "format": "git-template",
+  "formatVersion": "0.2.0",
+  "id": "clearpath",
+  "version": "1.0.0",
+  "name": "ClearPath · 清晰之路",
+  "localizedNames": {
+    "en": "ClearPath · Therapy & Coaching"
+  },
+  "gitUrl": "https://github.com/weelume/clearpath-template",
+  "sceneId": "corporate-site",
+  "listed": false,
+  "tags": [
+    "心理咨询",
+    "成长教练",
+    "中英文",
+    "响应式"
+  ],
+  "summary": "以柔和鼠尾草绿、沉浸式人像和滚动叙事呈现的心理咨询与成长教练模板，含 19 页双语内容",
+  "accentColor": "#7ea59a",
+  "cover": "assets/desktop-home.webp",
+  "screenshots": [
+    {
+      "src": "assets/desktop-home.webp",
+      "alt": "首页",
+      "device": "desktop",
+      "width": 1430,
+      "height": 993,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/desktop-services.webp",
+      "alt": "支持服务",
+      "device": "desktop",
+      "width": 1430,
+      "height": 993,
+      "surfaceId": "site",
+      "pageSlug": "services"
+    },
+    {
+      "src": "assets/desktop-journal.webp",
+      "alt": "心灵期刊",
+      "device": "desktop",
+      "width": 1430,
+      "height": 993,
+      "surfaceId": "site",
+      "pageSlug": "journal"
+    },
+    {
+      "src": "assets/desktop-contact.webp",
+      "alt": "预约会谈",
+      "device": "desktop",
+      "width": 1430,
+      "height": 993,
+      "surfaceId": "site",
+      "pageSlug": "book-a-session"
+    },
+    {
+      "src": "assets/tablet-home.webp",
+      "alt": "首页",
+      "device": "tablet",
+      "width": 824,
+      "height": 1166,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/tablet-services.webp",
+      "alt": "支持服务",
+      "device": "tablet",
+      "width": 824,
+      "height": 1166,
+      "surfaceId": "site",
+      "pageSlug": "services"
+    },
+    {
+      "src": "assets/tablet-journal.webp",
+      "alt": "心灵期刊",
+      "device": "tablet",
+      "width": 824,
+      "height": 1166,
+      "surfaceId": "site",
+      "pageSlug": "journal"
+    },
+    {
+      "src": "assets/tablet-contact.webp",
+      "alt": "预约会谈",
+      "device": "tablet",
+      "width": 824,
+      "height": 1166,
+      "surfaceId": "site",
+      "pageSlug": "book-a-session"
+    },
+    {
+      "src": "assets/mobile-home.webp",
+      "alt": "首页",
+      "device": "mobile",
+      "width": 380,
+      "height": 822,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/mobile-services.webp",
+      "alt": "支持服务",
+      "device": "mobile",
+      "width": 380,
+      "height": 822,
+      "surfaceId": "site",
+      "pageSlug": "services"
+    },
+    {
+      "src": "assets/mobile-journal.webp",
+      "alt": "心灵期刊",
+      "device": "mobile",
+      "width": 380,
+      "height": 822,
+      "surfaceId": "site",
+      "pageSlug": "journal"
+    },
+    {
+      "src": "assets/mobile-contact.webp",
+      "alt": "预约会谈",
+      "device": "mobile",
+      "width": 380,
+      "height": 822,
+      "surfaceId": "site",
+      "pageSlug": "book-a-session"
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "site",
+      "name": "官网",
+      "platform": "pc",
+      "locales": [
+        "zh",
+        "en"
+      ],
+      "pages": [
+        {
+          "slug": "",
+          "title": "首页",
+          "localizedTitles": {
+            "en": "A Path That Shapes Your Future."
+          }
+        },
+        {
+          "slug": "about",
+          "title": "关于我们",
+          "localizedTitles": {
+            "en": "Your Path, Our Purpose."
+          }
+        },
+        {
+          "slug": "services",
+          "title": "支持服务",
+          "localizedTitles": {
+            "en": "Every Step of Your Journey."
+          }
+        },
+        {
+          "slug": "stories",
+          "title": "成长故事",
+          "localizedTitles": {
+            "en": "Real people. Real change."
+          }
+        },
+        {
+          "slug": "journal",
+          "title": "心灵期刊",
+          "localizedTitles": {
+            "en": "Insights That Matter"
+          }
+        },
+        {
+          "slug": "book-a-session",
+          "title": "预约会谈",
+          "localizedTitles": {
+            "en": "Book a session"
+          }
+        },
+        {
+          "slug": "legal/privacy-policy",
+          "title": "隐私政策",
+          "localizedTitles": {
+            "en": "Privacy Policy."
+          }
+        },
+        {
+          "slug": "legal/terms-of-use",
+          "title": "使用条款",
+          "localizedTitles": {
+            "en": "Terms of Use."
+          }
+        },
+        {
+          "slug": "404",
+          "title": "未找到页面",
+          "localizedTitles": {
+            "en": "Page Not Found"
+          }
+        },
+        {
+          "slug": "stories/finding-balance-after-burnout",
+          "title": "从倦怠中找回平衡",
+          "localizedTitles": {
+            "en": "Finding balance after burnout."
+          }
+        },
+        {
+          "slug": "stories/starting-over-and-finding-herself-in-the-process",
+          "title": "重新遇见自己",
+          "localizedTitles": {
+            "en": "Starting over and finding herself in the process."
+          }
+        },
+        {
+          "slug": "journal/learning-to-pause-without-guilt",
+          "title": "学会暂停 不必内疚",
+          "localizedTitles": {
+            "en": "Learning to Pause Without Guilt."
+          }
+        },
+        {
+          "slug": "journal/what-makes-therapy-work",
+          "title": "是什么让咨询产生改变",
+          "localizedTitles": {
+            "en": "What Makes Therapy Work?"
+          }
+        },
+        {
+          "slug": "journal/the-art-of-slowing-down",
+          "title": "温柔地慢下来",
+          "localizedTitles": {
+            "en": "The Gentle Art of Slowing Down"
+          }
+        },
+        {
+          "slug": "stories/finding-each-other-again",
+          "title": "再次找到彼此",
+          "localizedTitles": {
+            "en": "Finding each other again."
+          }
+        },
+        {
+          "slug": "stories/rewriting-success-on-his-own-terms",
+          "title": "重新定义成功",
+          "localizedTitles": {
+            "en": "Rewriting success on his own terms."
+          }
+        },
+        {
+          "slug": "stories/turning-down-the-noise",
+          "title": "让喧闹慢下来",
+          "localizedTitles": {
+            "en": "Turning Down the Noise."
+          }
+        },
+        {
+          "slug": "journal/the-strength-in-letting-go",
+          "title": "在放下中找到力量",
+          "localizedTitles": {
+            "en": "Finding Strength in Release"
+          }
+        },
+        {
+          "slug": "journal/listening-to-yourself-again",
+          "title": "听见自己的声音",
+          "localizedTitles": {
+            "en": "Listening to Yourself Again."
+          }
+        }
+      ]
+    }
+  ],
+  "license": {
+    "type": "restricted",
+    "file": "docs/LICENSE.md",
+    "summary": "源码为定制模板；参考图片、人物及英文内容再分发授权未确认，字体分别遵循随附许可",
+    "redistributionAllowed": false
+  }
+}

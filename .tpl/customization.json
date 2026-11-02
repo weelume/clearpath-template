@@ -1,0 +1,91 @@
+{
+  "$schema": "./schemas/customization.schema.json",
+  "format": "git-template-customization",
+  "formatVersion": "0.2.0",
+  "entries": [
+    {
+      "id": "brand",
+      "title": "品牌与联系方式",
+      "description": "修改品牌名称与邮箱；消费方通过 Provider 注入自己的品牌",
+      "files": [
+        {
+          "path": "src/features/clearpath/content/site.ts",
+          "kind": "file",
+          "purpose": "默认品牌与公共内容"
+        },
+        {
+          "path": "src/features/clearpath/host.tsx",
+          "kind": "file",
+          "purpose": "宿主注入边界"
+        }
+      ],
+      "constraints": [
+        "双语同时维护",
+        "不得将消费方专属信息写入默认品牌"
+      ],
+      "checks": [
+        "typecheck",
+        "build"
+      ]
+    },
+    {
+      "id": "content",
+      "title": "页面与双语内容",
+      "description": "服务、团队、案例与文章",
+      "files": [
+        {
+          "path": "src/features/clearpath/content",
+          "kind": "directory",
+          "purpose": "双语数据"
+        },
+        {
+          "path": "src/features/clearpath/pages",
+          "kind": "directory",
+          "purpose": "页面组合"
+        }
+      ],
+      "constraints": [
+        "详情段落必须提供中英文",
+        "修改注册时同步市场元数据"
+      ],
+      "checks": [
+        "typecheck",
+        "test",
+        "build"
+      ]
+    },
+    {
+      "id": "theme",
+      "title": "主题、素材与动效",
+      "description": "修改主题令牌与分区动效",
+      "files": [
+        {
+          "path": "src/features/clearpath/theme.css",
+          "kind": "file",
+          "purpose": "响应式主题与滚动条"
+        },
+        {
+          "path": "src/features/clearpath/components/Motion.tsx",
+          "kind": "file",
+          "purpose": "滚动、路径、视差与数字动效"
+        },
+        {
+          "path": "public/templates/clearpath",
+          "kind": "directory",
+          "purpose": "本地运行素材"
+        }
+      ],
+      "constraints": [
+        "尊重减少动态设置",
+        "保持三端与320px可用",
+        "替换素材后更新来源与摘要"
+      ],
+      "checks": [
+        "typecheck",
+        "lint",
+        "test",
+        "build"
+      ]
+    }
+  ]
+}
