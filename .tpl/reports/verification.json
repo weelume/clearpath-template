@@ -1,0 +1,85 @@
+{
+  "$schema": "../schemas/verification.schema.json",
+  "format": "git-template-verification",
+  "formatVersion": "0.2.0",
+  "status": "passed",
+  "checkedAt": "2026-11-02T08:37:21.481Z",
+  "sourceCommit": "9736e78e72ee1e2126851619ea961eb56b8eda8b",
+  "sourceDigest": "7435eb23e3ac49c31e604be0e183329ce4730e66e4bf5e8b00be2813312fe5ff",
+  "environment": {
+    "platform": "linux",
+    "arch": "x64",
+    "node": "v24.16.0",
+    "packageManager": "9.15.4",
+    "cleanDirectory": true,
+    "localGitClone": true
+  },
+  "checks": [
+    {
+      "id": "typecheck",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "typecheck"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-11-02T08:36:58.236Z",
+      "finishedAt": "2026-11-02T08:36:59.973Z"
+    },
+    {
+      "id": "lint",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "lint"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-11-02T08:36:59.973Z",
+      "finishedAt": "2026-11-02T08:37:01.999Z"
+    },
+    {
+      "id": "test",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "test"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-11-02T08:37:01.999Z",
+      "finishedAt": "2026-11-02T08:37:02.495Z"
+    },
+    {
+      "id": "build",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "build"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-11-02T08:37:02.496Z",
+      "finishedAt": "2026-11-02T08:37:20.065Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "web",
+      "status": "passed",
+      "stopped": true,
+      "checkedAt": "2026-11-02T08:37:21.145Z",
+      "reason": "生产服务通过38条双语真实HTTP调用；使用PORT=43644隔离验收，随后停止本次进程组。"
+    }
+  ],
+  "limitations": [
+    "照片、人物、英文参考内容的商业再分发授权未确认；保持未上架。",
+    "中文字号与中英文字体按约定调整，政策与表单提示反映本地演示行为。",
+    "已验证主要运动类型及三端页面，尚无原站所有动效逐帧轨迹与精确时长完全一致的证据。"
+  ]
+}
