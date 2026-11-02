@@ -5,6 +5,8 @@
 @font-face{font-family:CPPoppins;src:url('/templates/clearpath/fonts/poppins-latin-700.woff2') format('woff2');font-weight:700;font-display:swap}
 .cp-site,html[data-clearpath]{--cp-ink:#292e2b;--cp-muted:#636b65;--cp-sage:#7ea59a;--cp-sage-dark:#3f6b5e;--cp-paper:#fff;--cp-wash:#f2f5f1;--cp-border:#dce4df;--cp-radius:24px;--cp-gutter:clamp(20px,4.45vw,72px);--cp-body:clamp(16px,1.12vw,17px);--cp-h1:clamp(28px,4vw,44px);--cp-h2:clamp(24px,3.3vw,36px);--cp-section:clamp(84px,9.8vw,144px);--cp-scroll-track:#f1f4f1;--cp-scroll-thumb:#adc3b8;--cp-scroll-hover:#7f9e90;--cp-glass:linear-gradient(145deg,#ffffffdf,#eef4efb0);--cp-shadow:0 18px 50px #4c726116;--cp-display:CPPoppins,MiSans,sans-serif;scrollbar-width:thin;scrollbar-color:var(--cp-scroll-thumb) var(--cp-scroll-track)}
 html[data-clearpath]{scroll-behavior:smooth;scroll-padding-top:104px}
+/* 明确文档滚动容器的定位基准，保证 useScroll 的目标偏移测量一致；离开模板即随作用域失效。 */
+html[data-clearpath]{position:relative}
 html[data-clearpath]::-webkit-scrollbar,.cp-site *::-webkit-scrollbar{width:9px;height:7px}
 html[data-clearpath]::-webkit-scrollbar-track,.cp-site *::-webkit-scrollbar-track{background:var(--cp-scroll-track)}
 html[data-clearpath]::-webkit-scrollbar-thumb,.cp-site *::-webkit-scrollbar-thumb{background:var(--cp-scroll-thumb);border:2px solid var(--cp-scroll-track);border-radius:8px}
